@@ -29,7 +29,12 @@ public class Servidor implements Runnable {
 	private Thread thread;
 	private long speed;
 	
-	private InetAddress direccion;
+	private String direccion;
+
+	
+
+
+
 
 	public Servidor(int puerto,String nombre) {
 		this.puerto=puerto;
@@ -49,7 +54,7 @@ public class Servidor implements Runnable {
 		System.out.println(puerto);
 		
 	    try {
-			direccion = InetAddress.getLocalHost();
+			direccion = InetAddress.getLocalHost().toString();
 			
 			System.out.println(direccion+"__________"+nombre);
 			
